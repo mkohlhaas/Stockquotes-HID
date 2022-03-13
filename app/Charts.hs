@@ -14,7 +14,7 @@ plotChart ::
   FilePath ->
   IO ()
 plotChart title quotes fname = do
-  _ <- renderableToFile fileOptions fname (toRenderable chart)
+  _ <- renderableToFile fileOptions fname $ toRenderable chart
   pure ()
   where
     fileOptions = FileOptions (800, 600) SVG loadSansSerifFonts
